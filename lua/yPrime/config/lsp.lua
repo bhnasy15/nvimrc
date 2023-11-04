@@ -35,7 +35,7 @@ if vim.g.loaded_telescope == 1 then
 		vim.keymap.set('n', 'gd', builtin.lsp_definitions, opts)
 		vim.keymap.set('n', 'gI', builtin.lsp_incoming_calls, opts)
 		vim.keymap.set('n', 'gO', builtin.lsp_outgoing_calls, opts)
-		vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', 'gK', vim.lsp.buf.hover, opts)
 		vim.keymap.set('n', 'gi', builtin.lsp_implementations, opts)
 		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 		vim.keymap.set('n', '<space>Wa', vim.lsp.buf.add_workspace_folder, opts)
@@ -63,7 +63,7 @@ else
 		local opts = { buffer = buf }
 		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
 		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-		vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', 'gK', vim.lsp.buf.hover, opts)
 		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
 		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 		vim.keymap.set('n', '<space>Wa', vim.lsp.buf.add_workspace_folder, opts)
