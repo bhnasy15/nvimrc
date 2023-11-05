@@ -2,7 +2,7 @@ vim.g.mapleader = ","
 
 vim.keymap.set('n', '<space>w', '<C-W>')
 vim.keymap.set('t', '<C-space>', '<C-\\><C-n>')
-vim.keymap.set('t', '<S-Esc>', '<C-\\><C-n>')
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 
 vim.keymap.set('n', ')', function() vim.cmd.bn{} end, {silent=true})
 vim.keymap.set('n', '(', function() vim.cmd.bp{} end, {silent=true})
