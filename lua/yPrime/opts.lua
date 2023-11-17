@@ -34,6 +34,7 @@ vim.opt.smartcase = true
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.numberwidth = 1
 
 vim.opt.cursorline = true
 
