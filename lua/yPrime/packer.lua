@@ -11,13 +11,9 @@ return require('packer').startup(function(use)
 	use {'mbbill/undotree'}
 	use {'tpope/vim-fugitive'}
 	use {"windwp/nvim-autopairs"}
-	use({
-		"kylechui/nvim-surround",
-		tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-	})
-	use {
-		"mg979/vim-visual-multi",
-	}
+	use({ "kylechui/nvim-surround", tag = "*" })
+	use {"mg979/vim-visual-multi"}
+	use {'numToStr/Comment.nvim'}
 	--optional
 	use {
 		'wbthomason/packer.nvim',

@@ -25,6 +25,7 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = false
 vim.opt.smartindent = true
+vim.opt.linebreak = true
 
 vim.opt.hlsearch = false
 vim.opt.showmatch = true
