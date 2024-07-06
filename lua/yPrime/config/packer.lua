@@ -21,7 +21,7 @@ packer.init({
 		cmd = 'git', -- The base command for git operations
 		subcommands = { -- Format strings for git subcommands
 		update         = 'pull --ff-only --progress --rebase=false --force',
-		install        = 'clone --depth %i --no-single-branch --progress',
+		install        = 'clone --depth 1 --no-single-branch --progress',
 		fetch          = 'fetch --depth 999999 --progress --force',
 		checkout       = 'checkout %s --',
 		update_branch  = 'merge --ff-only @{u}',
