@@ -3,7 +3,7 @@ local config = {
 	formatters = {
 		tidy = {
 			command = "tidy",
-			args = { "-q", "-w", "40", "-i", "--indent-attributes", "yes" },
+			args = { "-q", "-w", "50", "-i", "--indent-attributes", "yes" },
 		},
 		tidy_xml = {
 			command = "tidy",
@@ -13,6 +13,9 @@ local config = {
 			env = {
 				NO_COLOR = "1",
 			},
+		},
+		css_beautify = {
+			command = "css-beautify",
 		},
 	},
 	formatters_by_ft = {
@@ -26,6 +29,7 @@ local config = {
 		html = { "tidy" },
 		xml = { "tidy_xml" },
 		json = { "jq" },
+		css = { "css_beautify" },
 	},
 }
 
