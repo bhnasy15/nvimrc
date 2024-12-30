@@ -33,7 +33,7 @@ if vim.g.loaded_telescope == 1 then
 		vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
 		vim.keymap.set("n", "gI", builtin.lsp_incoming_calls, opts)
 		vim.keymap.set("n", "gO", builtin.lsp_outgoing_calls, opts)
-		vim.keymap.set("n", "gK", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 		vim.keymap.set("n", "gi", builtin.lsp_implementations, opts)
 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 		vim.keymap.set("n", "<space>Wa", vim.lsp.buf.add_workspace_folder, opts)
@@ -89,15 +89,29 @@ lspconfig.csharp_ls.setup({
 	autostart = false,
 })
 
--- lspconfig.jdtls.setup({
---     on_attach = on_attach,
---     autostart = false
--- })
+lspconfig.gopls.setup({
+	on_attach = on_attach,
+	autostart = false,
+})
 
--- lspconfig.lua_ls.setup({
---     on_attach = on_attach,
---     autostart = false
--- })
+lspconfig.jdtls.setup({
+	on_attach = on_attach,
+	autostart = false,
+	-- init_options = {
+	-- 	bundles = {
+	-- 		vim.fn.glob(
+	-- 			vim.fn.stdpath("data")
+	-- 				.. "/mason/packages/java-debug-adapter/extension/server/com.microsoft.java.debug.plugin-*.jar",
+	-- 			1
+	-- 		),
+	-- 	},
+	-- },
+})
+
+lspconfig.rust_analyzer.setup({
+	on_attach = on_attach,
+	autostart = false,
+})
 
 -- lspconfig.phpactor.setup({
 --     on_attach = on_attach,
@@ -105,11 +119,6 @@ lspconfig.csharp_ls.setup({
 -- })
 
 -- lspconfig.pylyzer.setup({
---     on_attach = on_attach,
---     autostart = false
--- })
-
--- lspconfig.rust_analyzer.setup({
 --     on_attach = on_attach,
 --     autostart = false
 -- })
