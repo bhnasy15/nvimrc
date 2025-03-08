@@ -1,9 +1,5 @@
 vim.g.netrw_banner          = 0
-vim.g.netrw_list_cmd        = 'ls -Fa'
-vim.g.netrw_liststyle       = 0
-vim.g.netrw_mkdir_cmd       = 'mkdir'
-vim.g.netrw_rename_cmd      = 'mv'
-vim.g.netrw_rm_cmd          = 'rm'
-vim.g.netrw_rmdir_cmd		= 'rmdir'
-vim.g.netrw_rmf_cmd			= 'rm -f'
-vim.g.netrw_localcopydircmd = 'cp -r'
+vim.g.netrw_liststyle       = 1
+vim.g.netrw_timefmt         = "%T %d %b %Y"
+vim.g.netrw_list_hide       = vim.fn["netrw_gitignore#Hide"]() .. ',' .. '.git/'
+vim.g.netrw_sizestyle       = "h"
