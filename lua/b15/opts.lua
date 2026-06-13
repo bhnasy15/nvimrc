@@ -11,6 +11,7 @@ vim.opt.showcmd = true
 vim.opt.wildmenu = true
 vim.opt.wop = "fuzzy,tagfile"
 vim.opt.wildmode = "longest:full:lastused"
+vim.opt.laststatus = 1
 
 vim.opt.scrolloff = 10
 vim.opt.backspace = "indent,eol,start"
@@ -20,16 +21,19 @@ vim.opt.encoding = "UTF-8"
 vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.undofile = true
-vim.opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undo"
+vim.opt.undodir = vim.fn.stdpath("state") .. "/undo"
 vim.opt.shada = "!,'10,<10,s2,h"
 
 vim.opt.foldenable = true
 vim.opt.foldmethod = "syntax"
 
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 vim.opt.smartindent = true
 vim.opt.linebreak = true
+vim.opt.listchars = "tab:| ,trail:-,nbsp:+,leadmultispace:|---,lead:-"
+vim.opt.list = true
 
 vim.opt.hlsearch = false
 vim.opt.showmatch = true

@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
 	use({ "mbbill/undotree" })
 	use({ "tpope/vim-fugitive" })
 	use({ "mg979/vim-visual-multi" })
+	use({ "ValdezFOmar/info.nvim" })
 	--optional
 	use({
 		"wbthomason/packer.nvim",
